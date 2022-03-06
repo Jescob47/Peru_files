@@ -27,6 +27,8 @@ format_doc = 'facetapi-link--9'
 word_to_search = 'donaciones'
 report_name = 'Donaciones COVID-19 - [Ministerio de Economía y Finanzas - MEF]'
 
+file_downloaded = 'D:/pcm_donaciones.zip'
+
 
 class FileToDownload(unittest.TestCase):
     """This class use functions to work with the webpage and download the file"""
@@ -71,7 +73,7 @@ class FileToDownload(unittest.TestCase):
 
     def close_window(self):
         """This funtion closes the windows"""
-        while not os.path.isfile('D:/pcm_donaciones.zip'):
+        while not os.path.isfile(file_downloaded):
             pass
         self.web_page.close()
 
